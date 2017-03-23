@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Tundrabots/Tundrabots.iml" filepath="$PROJECT_DIR$/Tundrabots/Tundrabots.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Tundrabots.com.iml" filepath="$PROJECT_DIR$/Tundrabots.com.iml" />
+      <module fileurl="file://C:\Users\Michael\IdeaProjects\tundrabots.com\Tundrabots\Tundrabots.iml" filepath="C:\Users\Michael\IdeaProjects\tundrabots.com\Tundrabots\Tundrabots.iml" />
+      <module fileurl="file://C:\Users\Michael\IdeaProjects\tundrabots.com\Tundrabots.com.iml" filepath="C:\Users\Michael\IdeaProjects\tundrabots.com\Tundrabots.com.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tundrabots.com.iml" filepath="$PROJECT_DIR$/tundrabots.com.iml" />
     </modules>
   </component>
 </project>
