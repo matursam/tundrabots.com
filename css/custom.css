@@ -19,7 +19,7 @@ a.active {
   color: white;
 }
 
-.resources-image {
+.guides-image {
   object-fit: cover;
   width: 100%;
   height: 200px;
@@ -127,6 +127,7 @@ header .intro-text .skills {
   text-transform: capitalize;
   font-size: 1.25em;
   font-weight: bold;
+  font-style: italic;
 }
 
 @media (min-width: 768px) {
@@ -236,9 +237,13 @@ section h2 {
   font-size: 3em;
 }
 
-section.success {
+section#resources {
   background: #546270;
   color: white;
+}
+
+section#about {
+  background: white;
 }
 
 @media (max-width: 767px) {
@@ -250,19 +255,19 @@ section.success {
   }
 }
 
-#resources .resources-item {
+#guides .guides-item {
   margin: 0 0 15px;
   right: 0;
 }
 
-#resources .resources-item .resources-link {
+#guides .guides-item .guides-link {
   display: block;
   position: relative;
   max-width: 400px;
   margin: 0 auto;
 }
 
-#resources .resources-item .resources-link .caption {
+#guides .guides-item .guides-link .caption {
   background: rgba(24, 188, 156, 0.9);
   position: absolute;
   width: 100%;
@@ -273,11 +278,11 @@ section.success {
   -moz-transition: all ease 0.5s;
 }
 
-#resources .resources-item .resources-link .caption:hover {
+#guides .guides-item .guides-link .caption:hover {
   opacity: 1;
 }
 
-#resources .resources-item .resources-link .caption .caption-content {
+#guides .guides-item .guides-link .caption .caption-content {
   position: absolute;
   width: 100%;
   height: 20px;
@@ -288,12 +293,69 @@ section.success {
   color: white;
 }
 
-#resources .resources-item .resources-link .caption .caption-content i {
+#guides .guides-item .guides-link .caption .caption-content i {
   margin-top: -12px;
 }
 
-#resources .resources-item .resources-link .caption .caption-content h3,
-#resources .resources-item .resources-link .caption .caption-content h4 {
+#guides .guides-item .guides-link .caption .caption-content h3,
+#guides .guides-item .guides-link .caption .caption-content h4 {
+  margin: 0;
+}
+
+#guides * {
+  z-index: 2;
+}
+
+@media (min-width: 767px) {
+  #guides .guides-item {
+    margin: 0 0 30px;
+  }
+}
+
+#resources .guides-item {
+  margin: 0 0 15px;
+  right: 0;
+}
+
+#resources .guides-item .guides-link {
+  display: block;
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+#resources .guides-item .guides-link .caption {
+  background: rgba(24, 188, 156, 0.9);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all ease 0.5s;
+  -webkit-transition: all ease 0.5s;
+  -moz-transition: all ease 0.5s;
+}
+
+#resources .guides-item .guides-link .caption:hover {
+  opacity: 1;
+}
+
+#resources .guides-item .guides-link .caption .caption-content {
+  position: absolute;
+  width: 100%;
+  height: 20px;
+  font-size: 20px;
+  text-align: center;
+  top: 50%;
+  margin-top: -12px;
+  color: white;
+}
+
+#resources .guides-item .guides-link .caption .caption-content i {
+  margin-top: -12px;
+}
+
+#resources .guides-item .guides-link .caption .caption-content h3,
+#resources .guides-item .guides-link .caption .caption-content h4 {
   margin: 0;
 }
 
@@ -302,65 +364,9 @@ section.success {
 }
 
 @media (min-width: 767px) {
-  #resources .resources-item {
+  #resources .guides-item {
     margin: 0 0 30px;
   }
-}
-
-.floating-label-form-group {
-  position: relative;
-  margin-bottom: 0;
-  padding-bottom: 0.5em;
-  border-bottom: 1px solid #eeeeee;
-}
-
-.floating-label-form-group input,
-.floating-label-form-group textarea {
-  z-index: 1;
-  position: relative;
-  padding-right: 0;
-  padding-left: 0;
-  border: none;
-  border-radius: 0;
-  font-size: 1.5em;
-  background: none;
-  box-shadow: none !important;
-  resize: none;
-}
-
-.floating-label-form-group label {
-  display: block;
-  z-index: 0;
-  position: relative;
-  top: 2em;
-  margin: 0;
-  font-size: 0.85em;
-  line-height: 1.764705882em;
-  vertical-align: middle;
-  vertical-align: baseline;
-  opacity: 0;
-  -webkit-transition: top 0.3s ease,opacity 0.3s ease;
-  -moz-transition: top 0.3s ease,opacity 0.3s ease;
-  -ms-transition: top 0.3s ease,opacity 0.3s ease;
-  transition: top 0.3s ease,opacity 0.3s ease;
-}
-
-.floating-label-form-group:not(:first-child) {
-  padding-left: 14px;
-  border-left: 1px solid #eeeeee;
-}
-
-.floating-label-form-group-with-value label {
-  top: 0;
-  opacity: 1;
-}
-
-.floating-label-form-group-with-focus label {
-  color: #546270;
-}
-
-form .row:first-child .floating-label-form-group {
-  border-top: 1px solid #eeeeee;
 }
 
 footer {
@@ -525,7 +531,7 @@ fieldset[disabled] .btn-success.active {
   line-height: 28px;
 }
 
-.resources-title {
+.guides-title {
   padding-top: 5px;
   padding-bottom: 5px;
   text-transform: uppercase;
@@ -535,7 +541,7 @@ fieldset[disabled] .btn-success.active {
   background-color: #2C3E50;
 }
 
-.resources-modal .modal-content {
+.guides-modal .modal-content {
   border-radius: 0;
   background-clip: border-box;
   -webkit-box-shadow: none;
@@ -546,20 +552,20 @@ fieldset[disabled] .btn-success.active {
   text-align: center;
 }
 
-.resources-modal .modal-content h2 {
+.guides-modal .modal-content h2 {
   margin: 0;
   font-size: 3em;
 }
 
-.resources-modal .modal-content img {
+.guides-modal .modal-content img {
   margin-bottom: 30px;
 }
 
-.resources-modal .modal-content .item-details {
+.guides-modal .modal-content .item-details {
   margin: 30px 0;
 }
 
-.resources-modal .close-modal {
+.guides-modal .close-modal {
   position: absolute;
   width: 75px;
   height: 75px;
@@ -569,11 +575,11 @@ fieldset[disabled] .btn-success.active {
   cursor: pointer;
 }
 
-.resources-modal .close-modal:hover {
+.guides-modal .close-modal:hover {
   opacity: 0.3;
 }
 
-.resources-modal .close-modal .lr {
+.guides-modal .close-modal .lr {
   height: 75px;
   width: 1px;
   margin-left: 35px;
@@ -586,7 +592,7 @@ fieldset[disabled] .btn-success.active {
   z-index: 1051;
 }
 
-.resources-modal .close-modal .lr .rl {
+.guides-modal .close-modal .lr .rl {
   height: 75px;
   width: 1px;
   background-color: #2C3E50;
@@ -598,7 +604,7 @@ fieldset[disabled] .btn-success.active {
   z-index: 1052;
 }
 
-.resources-modal .modal-backdrop {
+.guides-modal .modal-backdrop {
   opacity: 0;
   display: none;
 }
