@@ -11,14 +11,6 @@ p.small {
   font-size: 16px;
 }
 
-a,
-a:hover,
-a:focus,
-a:active,
-a.active {
-  color: white;
-}
-
 .guides-image {
   object-fit: cover;
   width: 100%;
@@ -539,6 +531,7 @@ fieldset[disabled] .btn-success.active {
   font-weight: bolder;
   font-size: 20px;
   background-color: #2C3E50;
+  color: white;
 }
 
 .guides-modal .modal-content {
@@ -549,12 +542,13 @@ fieldset[disabled] .btn-success.active {
   border: none;
   min-height: 100%;
   padding: 100px 0;
-  text-align: center;
+  text-align: justify;
 }
 
 .guides-modal .modal-content h2 {
   margin: 0;
   font-size: 3em;
+  text-align: center;
 }
 
 .guides-modal .modal-content img {
